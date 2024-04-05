@@ -18,9 +18,7 @@ mount /dev/sdx1 /mnt/boot
 mount /mnt/sdx3 /mnt/home
 lsblk, verify
 vim /etc/pacman.d/mirrorlist, find a uk mirror and move it to the top of the list
-pacstrap /mnt base base-devel linux linux-firmware grub iwd vim nano firefox
-networkmangaer htop git wget zsh bspwm xorg-server xorg-xinit efibootmgr
-os-prober polybar sxhkd noto-fonts kitty wal picom iputils
+pacstrap /mnt alacritty alsa-utils arandr asio base base-devel bind bspwm btop calibre clang cmake curl dmenu dmidecode dnsmasq docker docker-compose efibootmgr feh geoclue git glow go graphviz grub iptables-nft iputils iwd jq keepassxc libvirt linux linux-firmware lvm2 mage man-db mkinitcpio mpv neofetch neovim net-tools networkmanager newsboat nlohmann-json nmap noto-fonts npm ntfs-3g obs-studio obsidian openldap openssh openvpn p7zip picom polybar proxychains-ng pv python-jedi python-pywal qemu-full rust-analyzer scrot steam stow sxhkd syncthing syncthing-discosrv tldr tmux tor tree usbutils vim virt-manager wget whois wine wireshark-qt xorg-server xorg-xbacklight xorg-xinit yarn zathura zsh 
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
